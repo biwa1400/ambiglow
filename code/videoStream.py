@@ -1,3 +1,6 @@
+__author__ = "Dabin"
+__copyright__ = "Copyright 2019"
+
 from PIL import ImageGrab
 import numpy as np
 import cv2
@@ -6,8 +9,10 @@ import cv2
 class ScreenReader():
 
 	def getFream(self):
+		# Get screep frame
 		im = ImageGrab.grab()
-		imm=cv2.cvtColor(np.array(im), cv2.COLOR_RGB2BGR) # conver color to RGB
+		# conver to RGB
+		imm=cv2.cvtColor(np.array(im), cv2.COLOR_RGB2BGR)
 		return imm
 
 if __name__ == "__main__":
